@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>{{ title }}</h1>
+    <div>
+      <p><i>{{ momentjs(post.created).calendar() }}</i></p>
+      <p>{{ post.author }}</p>
+      <p>{{ post.title }}</p>
+      <p>{{ post.body|safe }}</p>
+    </div>
+    
+{% endblock %}
+
+

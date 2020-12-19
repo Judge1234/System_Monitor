@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>{{ title }}</h1>
+    {% for post in posts %}
+    <div>
+      <p>Date: {{ momentjs(post.created).calendar() }} Author: {{ post.author }} <a href="{{ url_for('post_id', id=post.id) }}"> {{ post.title }}</a></b></p>
+    </div>
+    {% endfor %}
+    
+{% endblock %}
